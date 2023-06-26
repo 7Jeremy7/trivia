@@ -36,6 +36,7 @@ comenzar.addEventListener("click",function(event){
     document.getElementById("pantalla-juego").style.display = "block";
 
     largarTiempo()
+    cargarPregunta() 
 })
 function largarTiempo(){
     countdown = setInterval(()=>{
