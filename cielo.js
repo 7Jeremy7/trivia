@@ -1,8 +1,15 @@
 const TOTAL_PREGUNTAS = 10;
+//base de datos de las preguntas
+const bd_juego = [
+    {
+        id:'A',
+    pregunta: '¿Cuál es el motivo principal por el cual las almas están rodeadas de una luz tenue y se mueven en un círculo? ',
+respuesta: "compromiso" },
+]
 //variables para controlar el tiempo 
 const timer = document.getElementById("tiempo");
 //tiempo del juego en segundos 
-const TIEMPO_DEL_JUEGO = 60;
+const TIEMPO_DEL_JUEGO = 5;
 //variable que indica el tiempo restante 
 let timeleft = TIEMPO_DEL_JUEGO;
 //variable de maneja el contador 
@@ -39,9 +46,10 @@ function largarTiempo(){
         //si el tiempo llega  a 0, detener el cronometro 
         if(timeleft<0){
             clearInterval(countdown);
-            mostrarPantalla
+            //mostrarPantallaFinal;
+            alert("se acabo el tiempo")
         }
-    })
+    },1000);
 }
 
 
